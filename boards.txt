@@ -5879,6 +5879,36 @@ ESC_board.menu.upload_method.dfuMethod.upload.options=-g
 ESC_board.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
 
 ################################################################################
+# MATERIAM STM32 boards
+
+MATERIAM.name=MATERIAM
+
+MATERIAM.build.core=arduino
+MATERIAM.build.board=MATERIAM
+MATERIAM.build.variant_h=variant_{build.board}.h
+MATERIAM.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+
+# SERAPH L4 BOARD
+
+MATERIAM.menu.pnum.SERPAH=SERAPH L4
+MATERIAM.menu.pnum.SERPAH.node=NODE_L432KC
+MATERIAM.menu.pnum.SERPAH.upload.maximum_size=262144
+MATERIAM.menu.pnum.SERPAH.upload.maximum_data_size=65536
+MATERIAM.menu.pnum.SERPAH.build.mcu=cortex-m4
+MATERIAM.menu.pnum.SERPAH.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
+MATERIAM.menu.pnum.SERPAH.build.board=SERAPH
+MATERIAM.menu.pnum.SERPAH.build.series=STM32L4xx
+MATERIAM.menu.pnum.SERPAH.build.product_line=STM32L432xx
+MATERIAM.menu.pnum.SERPAH.build.variant=STM32L4xx/L432K(B-C)U_L442KCU
+MATERIAM.menu.pnum.SERPAH.build.cmsis_lib_gcc=arm_cortexM4lf_math
+
+MATERIAM.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+MATERIAM.menu.upload_method.dfuMethod.upload.protocol=2
+MATERIAM.menu.upload_method.dfuMethod.upload.options=-g
+MATERIAM.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+
+################################################################################
 # Garatronic-McHobby STM32 boards
 
 Garatronic.name=Garatronic-McHobby
